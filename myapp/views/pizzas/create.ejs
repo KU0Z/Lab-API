@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Pizzas</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/pizzas">Pizzas List</a></h3>
+      <h1>Create New Pizzas</h1>
+      <form action="/pizzas/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Nombre</td>
+              <td><input type="text" name="nombre" /></td>
+            </tr>
+            <tr>
+              <td>Masa</td>
+              <td><textarea name="masa"></textarea></td>
+            </tr>
+            <tr>
+              <td>Descripcion</td>
+              <td><input type="text" name="descripcion" /></td>
+            </tr>
+            <tr>
+                <td>tamaño</td>
+                <td><input type="number" name="tamaño" /></td>
+            </tr>
+            <tr>
+              <td>porciones</td>
+              <td><input type="number" name="porciones" /></td>
+            </tr>
+            
+            <tr>
+              <td colspan="2"><input type="submit" value="Save" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

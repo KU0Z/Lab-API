@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pizza Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/pizzas">Pizza List</a></h3>
+      <h1>Pizza Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Nombre</td>
+            <td>:</td>
+            <td><%= pizza.nombre %></td>
+          </tr>
+          <tr>
+            <td>Masa</td>
+            <td>:</td>
+            <td><%= pizza.masa %></td>
+          </tr>
+          <tr>
+            <td>Ingredientes</td>
+            <td>:</td>
+            <td><%= pizza.ingredientes %></td>
+          </tr>
+          <tr>
+            <td>Queso</td>
+            <td>:</td>
+            <td>$<%= pizza.queso %>/year</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/pizzas/edit/<%= pizza._id%>">EDIT</a></h3>
+      <form action="/pizzas/delete/<%= pizza._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>
