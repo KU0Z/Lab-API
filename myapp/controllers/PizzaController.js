@@ -5,7 +5,7 @@ var pizzaController = {};
 
 // Show list of pizzas
 pizzaController.list = function(req, res) {
-    pizzaController.find({}).exec(function (err, pizzas) {
+  Pizza.find({}).exec(function (err, pizzas) {
     if (err) {
       console.log("Error:", err);
     }
