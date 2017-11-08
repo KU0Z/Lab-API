@@ -36,5 +36,9 @@ router.post('/update/:id', function(req, res) {
 router.post('/delete/:id', function(req, res, next) {
   pizza.delete(req, res);
 });
+// router.get('/jwt', function(req, res, next) {
+//   res.render("../views/pizzas/jwt", {pizza: pizza})
+// });
+
 
 module.exports = router;
