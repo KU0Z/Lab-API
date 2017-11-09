@@ -9,7 +9,7 @@
       <h3><a href="/pizzas/create">Create Pizza</a></h3>
       <h1>Pizza List</h1>
       <% if(pizzas.length>0) { %>
-      <table>
+      <table border="1">
         
           <tr>
             <th>Nombre</th>
@@ -23,6 +23,7 @@
               <td><%= pizzas[i].masa%></td>
               <td><%= pizzas[i].descripcion%></td>
               <td><%= pizzas[i].tamaño%></td>
+              <td><a href="/pizzas/delete/<%= pizzas[i]._id%>">hola</a></td>
             </tr>
           <% } %>
       
