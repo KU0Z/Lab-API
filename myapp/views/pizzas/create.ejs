@@ -7,6 +7,7 @@
   <body>
     <div class="container">
       <h3><a href="/pizzas">Pizzas List</a></h3>
+      <h3><a href="/">Home</a></h3>
       <h1>Create New Pizzas</h1>
       <form action="/pizzas/save" method="post">
         <table>
@@ -46,10 +47,18 @@
             <td>Ingredientes</td>
             <td><textarea name="ingredientes"></textarea></td>
           </tr>
-            
-            <tr>
-              <td colspan="2"><input type="submit" value="Save" /></td>
-            </tr>
+          <tr>
+              <td>Queso</td>
+              <td><select  name="queso">
+                <option value="Normal">Normal</option>
+                <option value="Extra Queso">Extra Queso</option>
+                <option value="Sin  Queso" selected>Sin  Queso</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="Save" /></td>
+          </tr>
+        </tbody>
           </tbody>
         </table>
       </form>

@@ -61,7 +61,7 @@ pizzaController.edit = function(req, res) {
 
 // Update an pizza
 pizzaController.update = function(req, res) {
-  Pizza.findByIdAndUpdate(req.params.id, { $set: { name: req.body.name, address: req.body.address, position: req.body.position, salary: req.body.salary }}, { new: true }, function (err, pizza) {
+  Pizza.findByIdAndUpdate(req.params.id, { $set: { name: req.body.name, masa: req.body.masa, descripcion: req.body.descripcion, tamaño: req.body.tamaño }}, { new: true }, function (err, pizza) {
     if (err) {
       console.log(err);
       res.render("../views/pizzas/edit", {pizza: req.body});

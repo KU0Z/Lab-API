@@ -7,24 +7,35 @@
   <body>
     <div class="container">
       <h3><a href="/pizzas">Pizza List</a></h3>
+      <h3><a href="/">Home</a></h3>
       <h1>Edit Pizza</h1>
       <form action="/pizzas/update/<%= pizza._id%>" method="post">
         <table>
           <tbody>
             <tr>
-              <td>Name</td>
-              <td><input type="text" name="name" value="<%= pizza.name %>" /></td>
+              <td>Nombre</td>
+              <td><input type="text" name="nombre" value="<%= pizza.name %>" /></td>
             </tr>
             <tr>
-              <td>Address</td>
-              <td><textarea name="address"><%= pizza.address %></textarea></td>
+              <td>Masa</td>
+              <td><select  name="masa">
+                  <option value="Pan Pizza">Pan Pizza</option>
+                  <option value="Crispi">Crispi</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Hut cheese" selected>Hut cheese</option>
+                </select></td>
             </tr>
             <tr>
-              <td>Position</td>
-              <td><input type="text" name="position" value="<%= pizza.position %>" /></td>
+              <td>Tamaño</td>
+              <td><select  name="tamaño">
+                <option value="Personal">Personal</option>
+                <option value="Normal">Normal</option>
+                <option value="Grande">Crispi</option>
+                <option value="Extra Grande" selected>Extra Grande</option>
+              </select></td>
             </tr>
             <tr>
-              <td>Salary</td>
+              <td>Porciones</td>
               <td><input type="number" name="salary" value="<%= pizza.salary %>" /></td>
             </tr>
             <tr>

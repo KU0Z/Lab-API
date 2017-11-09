@@ -7,23 +7,30 @@
   <body>
     <div class="container">
       <h3><a href="/pizzas/create">Create Pizza</a></h3>
+      <h3><a href="/">Home</a></h3>
       <h1>Pizza List</h1>
       <% if(pizzas.length>0) { %>
       <table border="1">
         
           <tr>
             <th>Nombre</th>
-            <th>masa</th>
-            <th>descripcion</th>
-            <th>Position</th>
+            <th>Masa</th>
+            <th>Tamaño</th>
+            <th>Porciones</th>
+            <th>Queso</th>
           </tr>
           <% for(var i=0; i<pizzas.length;i++) { %>
             <tr>
-              <td><a href="/pizzas/show/<%= pizzas[i]._id%>"><%= pizzas[i].nombre%></a></td>
+              <td><%= pizzas[i].nombre%></td>
               <td><%= pizzas[i].masa%></td>
-              <td><%= pizzas[i].descripcion%></td>
+              <td><%= pizzas[i].porciones%></td>
               <td><%= pizzas[i].tamaño%></td>
-              <td><a href="/pizzas/delete/<%= pizzas[i]._id%>">hola</a></td>
+              <td><%= pizzas[i].queso%></td>
+              <td><a href="/pizzas/show/<%= pizzas[i]._id%>">DETALLES</a></td>
+              <td><a href="/pizzas/edit/<%= pizzas[i]._id%>">EDITAR</a></td>
+              <form action="/pizzas/delete/<%= pizzas[i]._id%>" method="post">
+              <td><button type="submit">DELETE</button></td>
+            </form>
             </tr>
           <% } %>
       
