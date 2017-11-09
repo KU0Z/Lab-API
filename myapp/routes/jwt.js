@@ -1,9 +1,18 @@
 var express = require('express');
+var jwt = require('jsonwebtoken');
 var router = express.Router();
-var prueba = require('jsonwebtoken');
 
-router.get('/mostar', function(req, res, next) {
-    res.render("../views/jwt");
+router.get('/', function(req, res, next) {
+  res.render('jwt', { title: 'Express' });
+});
+
+
+router.post('/', function(req, res) {
+  console.log("entro"+ req.body.texto);
+   var payload = {somethingSecret: '' }
+    var token = jwt.sign({Palabra: req.body.texto}, 'somethingSecret');
+    res.json({success: true, cifrado: token });
+    
   });
   
 module.exports = router;

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
    <head>
-
-       <h1>Bienvenido hijo de la gran puta</h1>
+       <h1>Bienvenido</h1>
+       <script src="jquery-3.2.1.min.js"></script>
    </head>
    <body>
        <div class= "index">
            <label for = "word">Ingrese su palabra secreta</label>
            <br>
-           <input type="text" name="Value" id="txt1">
+           <input type="text" name="txt1" id="txt1">
            <br>
-           <button onclick = > Aceptar</button> 
+           <form action="/jwt" method="post">
+           <button onclick = "cifrar()" type="button">Aceptar</button>
+            </form>
            <br> 
            <textarea id = "txtArea" name = "txtArea" style = "width:300px; height: 300px;">JSON</textarea> 
            <textarea id = "txtArea2" name = "txtArea2" style = "width:300px; height: 300px;">JWT</textarea>
@@ -19,3 +21,26 @@
 
 
 </html>
+
+<script type="text/javascript">
+
+    function cifrar(){
+        $.ajax({
+            url: '/jwt',
+            type: "POST",
+            dataType: "json",
+            data: {"texto": $('#txt1').val()},
+            success: function(res){
+                //if(res.success)
+                //{
+                    $('#txtArea').val(res.data);//JSON
+                    $('#txtArea2').val(res.cifrado);
+                //}
+                console.log('success');  
+            }
+        });
+
+    }
+    $("#txtArea")
+
+</script>
