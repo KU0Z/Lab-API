@@ -4,7 +4,7 @@ var PizzaSchema = new mongoose.Schema({
   nombre: String,
   masa: String,
   descripcion: String,
-  ingredientes: String,
+  ingredientes: {},
   queso: String,
   tamaño: Number,
   porciones: Number,

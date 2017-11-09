@@ -10,14 +10,13 @@
       <h1>Pizza List</h1>
       <% if(pizzas.length>0) { %>
       <table>
-        <thead>
+        
           <tr>
-            <th>Pizza Nombre</th>
+            <th>Nombre</th>
+            <th>masa</th>
+            <th>descripcion</th>
             <th>Position</th>
           </tr>
-        </thead>
-        <tbody>
-
           <% for(var i=0; i<pizzas.length;i++) { %>
             <tr>
               <td><a href="/pizzas/show/<%= pizzas[i]._id%>"><%= pizzas[i].nombre%></a></td>
@@ -26,6 +25,10 @@
               <td><%= pizzas[i].tamaño%></td>
             </tr>
           <% } %>
+      
+        <tbody>
+
+          
         </tbody>
       </table>
       <% } else { %>

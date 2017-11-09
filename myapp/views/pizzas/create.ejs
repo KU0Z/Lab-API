@@ -17,20 +17,36 @@
             </tr>
             <tr>
               <td>Masa</td>
-              <td><textarea name="masa"></textarea></td>
+              <td>
+              <select  name="masa">
+                <option value="Pan Pizza">Pan Pizza</option>
+                <option value="Crispi">Crispi</option>
+                <option value="Normal">Normal</option>
+                <option value="Hut cheese" selected>Hut cheese</option>
+              </select></td>
             </tr>
             <tr>
               <td>Descripcion</td>
-              <td><input type="text" name="descripcion" /></td>
+              <td><textarea name="descripcion"></textarea></td>
             </tr>
             <tr>
-                <td>tamaño</td>
-                <td><input type="number" name="tamaño" /></td>
+                <td>Tamaño</td>
+                <td><select  name="tamaño">
+                  <option value="Personal">Personal</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Grande">Crispi</option>
+                  <option value="Extra Grande" selected>Extra Grande</option>
+                </select></td>
             </tr>
             <tr>
-              <td>porciones</td>
+              <td>Porciones</td>
               <td><input type="number" name="porciones" /></td>
             </tr>
+            <tr>
+            <td>Ingredientes</td>
+            <td><input type="checkbox" name="ingredientes" value="Jamon">Jamon<br></td>
+            <td><input type="checkbox" name="ingredientes" value="Peperoni" checked>Peperoni<br></td>
+          </tr>
             
             <tr>
               <td colspan="2"><input type="submit" value="Save" /></td>
