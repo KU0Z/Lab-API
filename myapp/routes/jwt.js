@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res) {
   console.log("entro"+ req.body.texto);
    var payload = {somethingSecret: '' }
-    var token = jwt.sign({Palabra: req.body.texto}, 'somethingSecret');
+    var token = jwt.sign({Palabra: req.body.texto}, req.body.clave);
     res.json({success: true, cifrado: token });
     
   });

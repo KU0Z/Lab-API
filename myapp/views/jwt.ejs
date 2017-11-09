@@ -10,6 +10,10 @@
            <br>
            <input type="text" name="txt1" id="txt1">
            <br>
+           <label for = "word">Ingrese su clave secreta</label>
+           <br>
+           <input type="text" name="txt2" id="txt2">
+           <br>
            <form action="/jwt" method="post">
            <button onclick = "cifrar()" type="button">Aceptar</button>
             </form>
@@ -29,11 +33,11 @@
             url: '/jwt',
             type: "POST",
             dataType: "json",
-            data: {"texto": $('#txt1').val()},
+            data: {"texto": $('#txt1').val(), "clave":$('#txt2').val() },
             success: function(res){
                 //if(res.success)
                 //{
-                    $('#txtArea').val(res.data);//JSON
+                    $('#txtArea').val("{texto:" + $('#txt1').val() + "}");//JSON
                     $('#txtArea2').val(res.cifrado);
                 //}
                 console.log('success');  
